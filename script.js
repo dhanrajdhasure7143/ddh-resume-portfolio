@@ -35,3 +35,22 @@ window.onscroll = function() {
         scrollBtn.style.display = "none";
     }
 };
+
+
+function closePopup() {
+    document.getElementById('welcomePopup').classList.remove('active');
+    localStorage.setItem('portfolioVisited', 'true');
+}
+
+function showPopup() {
+    var hasVisited = localStorage.getItem('portfolioVisited');
+    if (!hasVisited) {
+        setTimeout(function() {
+            document.getElementById('welcomePopup').classList.add('active');
+        }, 500);
+    }
+}
+
+window.addEventListener('load', function() {
+    showPopup();
+});

@@ -22,59 +22,16 @@ function checkTime(i) {
     return i;
 }
 
-// Visitor Counter Animation
-var visitorCount = 478;
-function updateCounter() {
-    visitorCount++;
-    var counterStr = String(visitorCount).padStart(6, '0');
-    document.getElementById('counter').innerHTML = counterStr;
-    document.getElementById('visitorNum').innerHTML = visitorCount;
-}
-
-setInterval(updateCounter, 30000);
-
-// Form Validation
-function validateForm() {
-    var name = document.forms["contactForm"]["name"].value;
-    var email = document.forms["contactForm"]["email"].value;
-    var message = document.forms["contactForm"]["message"].value;
-    
-    if (name == "") {
-        alert("Please enter your name!");
-        return false;
-    }
-    
-    if (email == "") {
-        alert("Please enter your email!");
-        return false;
-    }
-    
-    //Email validation
-    var atpos = email.indexOf("@");
-    var dotpos = email.lastIndexOf(".");
-    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= email.length) {
-        alert("Please enter a valid email address!");
-        return false;
-    }
-    
-    if (message == "") {
-        alert("Please enter a message!");
-        return false;
-    }
-    
-    alert("Thank you for your message! I will get back to you soon.");
-    return false;
-}
-
 // Scroll to top function
 function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-function addToFavorites() {
-    if (window.external && ('AddFavorite' in window.external)) {
-        window.external.AddFavorite(location.href, document.title);
+window.onscroll = function() {
+    var scrollBtn = document.getElementById("scrollToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
     } else {
-        alert('Press Ctrl+D to bookmark this page!');
+        scrollBtn.style.display = "none";
     }
-}
+};

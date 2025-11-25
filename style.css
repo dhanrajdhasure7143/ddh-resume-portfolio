@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -109,11 +113,6 @@ h1, h2, h3 {
     text-shadow: 2px 2px 4px #999999;
 }
 
-#counter {
-    font-size: 18px;
-    letter-spacing: 3px;
-    margin: 10px 0;
-}
 
 #clock {
     color: #CC0000;
@@ -124,4 +123,33 @@ h1, h2, h3 {
 
 img {
     image-rendering: pixelated;
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: 3px solid #003366;
+    outline: none;
+    background: linear-gradient(to bottom, #FFFF00, #FFCC00);
+    color: #003366;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Verdana, sans-serif;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+#scrollToTop:hover {
+    background: linear-gradient(to bottom, #FF9900, #FF6600);
+    color: #FFFFFF;
+}
+
+#scrollToTop:active {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
 }

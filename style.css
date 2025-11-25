@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -8,6 +13,8 @@ body {
     font-family: Arial, Verdana, sans-serif;
     background-color: #FFFFFF;
     background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="20" height="20" fill="%23f0f0f0"/%3E%3Crect width="10" height="10" fill="%23e0e0e0"/%3E%3Crect x="10" y="10" width="10" height="10" fill="%23e0e0e0"/%3E%3C/svg%3E');
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .navlink {
@@ -47,7 +54,6 @@ body {
     from { width: 0%; }
 }
 
-/* Buttons */
 .button {
     background: linear-gradient(to bottom, #CCCCFF, #9999FF);
     border: 2px outset #666666;
@@ -101,6 +107,9 @@ a:hover {
 
 table {
     font-size: 14px;
+    max-width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 hr {
@@ -112,7 +121,6 @@ hr {
 h1, h2, h3 {
     text-shadow: 2px 2px 4px #999999;
 }
-
 
 #clock {
     color: #CC0000;
@@ -152,4 +160,337 @@ img {
 #scrollToTop:active {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     transform: translateY(2px);
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+    
+    table[width="100%"] {
+        width: 100% !important;
+    }
+    
+    table[width="200"] {
+        width: 100% !important;
+        display: block;
+    }
+    
+    marquee font {
+        font-size: 3 !important;
+    }
+    
+    #scrollToTop {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        word-wrap: break-word !important;
+    }
+    
+    table, tbody, tr {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    td {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    td[width="200"] {
+        display: none !important;
+    }
+    
+    td[valign="top"] {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .navlink {
+        font-size: 15px;
+        padding: 8px;
+        margin: 5px 0;
+        display: block;
+        width: 100%;
+    }
+    
+    .skill-bar {
+        width: 60% !important;
+        max-width: 150px;
+    }
+    
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: auto !important;
+    }
+    
+    .profile-photo {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    input[type="text"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    
+    font[size="6"] {
+        font-size: 26px !important;
+    }
+    
+    font[size="5"] {
+        font-size: 22px !important;
+    }
+    
+    font[size="4"] {
+        font-size: 18px !important;
+    }
+    
+    font[size="3"] {
+        font-size: 15px !important;
+    }
+    
+    font[size="2"] {
+        font-size: 14px !important;
+    }
+    
+    marquee {
+        font-size: 15px !important;
+        width: 100% !important;
+    }
+    
+    marquee font {
+        font-size: 15px !important;
+    }
+    
+    #scrollToTop {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    table[cellpadding="20"] td {
+        padding: 10px !important;
+    }
+    
+    table[cellpadding="10"] td {
+        padding: 8px !important;
+    }
+    
+    table[cellpadding="5"] td {
+        padding: 5px !important;
+    }
+    
+    .button {
+        width: 100%;
+        max-width: 100%;
+        margin: 5px 0;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    
+    ul, ol {
+        padding-left: 20px;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        font-size: 15px;
+    }
+    
+    a {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        font-size: 15px;
+    }
+    
+    li {
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    
+    b, strong {
+        font-size: inherit;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    table {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    td[width="200"] {
+        display: none !important;
+    }
+    
+    td {
+        overflow-x: hidden !important;
+        word-wrap: break-word !important;
+    }
+    
+    font[size="6"] {
+        font-size: 24px !important;
+    }
+    
+    font[size="5"] {
+        font-size: 20px !important;
+    }
+    
+    font[size="4"] {
+        font-size: 17px !important;
+    }
+    
+    font[size="3"] {
+        font-size: 14px !important;
+    }
+    
+    font[size="2"] {
+        font-size: 13px !important;
+    }
+    
+    .skill-bar {
+        width: 50% !important;
+        max-width: 120px;
+    }
+    
+    table[cellpadding="20"] td {
+        padding: 8px !important;
+    }
+    
+    table[cellpadding="10"] td {
+        padding: 5px !important;
+    }
+    
+    table[cellpadding="5"] td {
+        padding: 3px !important;
+    }
+    
+    #clock, #counter {
+        font-size: 13px !important;
+        padding: 5px !important;
+    }
+    
+    #scrollToTop {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .navlink {
+        font-size: 14px;
+        padding: 8px;
+        width: 100%;
+    }
+    
+    marquee {
+        font-size: 13px !important;
+        width: 100% !important;
+    }
+    
+    marquee font {
+        font-size: 13px !important;
+    }
+    
+    input[type="text"], textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    
+    ul, ol {
+        padding-left: 15px;
+        font-size: 14px;
+    }
+    
+    li {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    a {
+        word-break: break-all;
+        font-size: 14px;
+    }
+    
+    .profile-photo {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .button {
+        font-size: 14px;
+    }
+    
+    b, strong {
+        font-size: inherit;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        font-size: 16px;
+    }
+    
+    body > table {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+@media print {
+    #scrollToTop {
+        display: none !important;
+    }
+    
+    marquee {
+        display: none !important;
+    }
+    
+    .navlink {
+        color: #000 !important;
+        background: none !important;
+    }
 }

@@ -2,6 +2,10 @@
 
 A retro-modern portfolio website showcasing my journey as a Full-Stack Java Developer.
 
+## �  Live Demo
+
+**[View Portfolio →](https://resumeofddh.netlify.app/)**
+
 ## 🎨 Features
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop
 - **Interactive Elements**: Smooth scrolling, animated skill bars, and dynamic content
